@@ -1,5 +1,5 @@
 import logging
-from unittest import result
+
 
 
 logging.basicConfig(level=logging.INFO)
@@ -171,3 +171,32 @@ def calculate_sum():
 
 
 calculate_sum()
+
+
+
+
+
+import logging
+
+
+logging.basicConfig(level=logging.INFO)
+
+def display_user_info():
+    logging.info("Program started")
+
+    try:
+        
+        name = input("Enter your name: ")
+        age = int(input("Enter your age: "))
+
+        
+        print(f"Name: {name}, Age: {age}")
+
+        logging.info("User information displayed successfully")
+
+    except ValueError:
+        print("Invalid age input.")
+        logging.error("Invalid age entered")
+
+
+display_user_info()
